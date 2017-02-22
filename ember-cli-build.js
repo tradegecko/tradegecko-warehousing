@@ -4,8 +4,8 @@ var EmberAddon = require('ember-cli/lib/broccoli/ember-addon');
 
 module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
-    // Add options here
   });
+  app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
   /*
     This build file specifies the options for the dummy test app of this
