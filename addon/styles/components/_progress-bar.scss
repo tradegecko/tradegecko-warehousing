@@ -1,0 +1,13 @@
+.tradegecko-ui-progress-bar {
+  position: relative;
+  background-color: #E2E6E8;
+  border-radius: 3px;
+  overflow: hidden;
+
+  &__fill {
+    display: block;
+    background-color: #70CF32;;
+    height: 6px;
+    transition: width 2s ease-in-out;
+  }
+}

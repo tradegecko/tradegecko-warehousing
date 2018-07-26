@@ -1,0 +1,53 @@
+$screen-xs-max: 768px;
+$tradegecko-ui-action-sheet-z-index: 10;
+$tradegecko-ui-action-sheet-mobile-height: 70%;
+$tradegecko-ui-action-sheet-tablet-height: 50%;
+$tradegecko-ui-action-sheet-tablet-margin: 25%;
+
+.tradegecko-ui-action-sheet {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $tradegecko-ui-action-sheet-z-index;
+
+  background-color: rgba(#fff, 0.8);
+  outline: 0;
+
+  &--open {
+    overflow: hidden;
+  }
+
+  &__position {
+    position: relative;
+    height: 100%;
+  }
+
+  &__content {
+    border: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: 0 2px 15px -2px rgba(#000, 0.3);
+    background: #fff;
+  }
+
+  @media (max-width: $screen-xs-max) {
+    &__position {
+      top: calc(100% - #{$tradegecko-ui-action-sheet-mobile-height});
+    }
+    &__content {
+      height: $tradegecko-ui-action-sheet-mobile-height;
+    }
+  }
+
+  @media (min-width: $screen-xs-max) {
+    &__position {
+      top: calc((100% - #{$tradegecko-ui-action-sheet-tablet-height})/2);
+      margin: 0 $tradegecko-ui-action-sheet-tablet-margin;
+    }
+    &__content {
+      height: $tradegecko-ui-action-sheet-tablet-height;
+    }
+  }
+}

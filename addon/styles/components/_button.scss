@@ -1,0 +1,62 @@
+$button-height: 38px;
+$button-border-radius: 3px;
+$primary-button-font-size: 13px;
+$primary-button-line-height: 15px;
+$secondary-button-font-size: 12px;
+$secondary-button-line-height: 14px;
+
+$button-types: (
+  (
+    name: primary,
+    font-size: $primary-button-font-size,
+    line-height: $primary-button-line-height,
+    color: #fff,
+    background-color: #70cf32,
+    disabled-color: #fff,
+    disabled-background-color: #e2e6e8,
+  ),
+  (
+    name: secondary,
+    font-size: $secondary-button-font-size,
+    line-height: $secondary-button-line-height,
+    color: #70cf32,
+    background-color: #fff,
+    disabled-color: #c4ced1,
+    disabled-background-color: #fff,
+  ),
+);
+
+.tradegecko-ui-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: Raleway, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid;
+  border-radius: $button-border-radius;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &[disabled] {
+    cursor: default;
+    pointer-events: none;
+    border-color: #e2e6e8;
+  }
+
+  @each $type in $button-types {
+    &--#{map-get($type, name)} {
+      font-size: map-get($type, font-size);
+      line-height: map-get($type, line-height);
+      padding: (0.5 * ($button-height - map-get($type, line-height))) 15px;
+      color: map-get($type, color);
+      background-color: map-get($type, background-color);
+      border-color: #70cf32;
+
+      &[disabled] {
+        color: map-get($type, disabled-color);
+        background-color: map-get($type, disabled-background-color);
+      }
+    }
+  }
+}
