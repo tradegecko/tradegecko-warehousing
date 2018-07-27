@@ -1,1 +1,1 @@
-export { default } from 'tradegecko-ui/components/button';
+export { default } from '@tradegecko/warehousing/components/button';

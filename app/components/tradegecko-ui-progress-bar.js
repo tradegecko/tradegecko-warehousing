@@ -1,1 +1,1 @@
-export { default } from 'tradegecko-ui/components/progress-bar';
+export { default } from '@tradegecko/warehousing/components/progress-bar';

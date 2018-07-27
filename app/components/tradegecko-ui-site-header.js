@@ -1,1 +1,1 @@
-export { default } from 'tradegecko-ui/components/site-header';
+export { default } from '@tradegecko/warehousing/components/site-header';

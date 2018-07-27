@@ -1,7 +1,7 @@
 {
-  "name": "tradegecko-ui",
+  "name": "@tradegecko/warehousing",
   "version": "0.1.0",
-  "description": "UI Library for Tradegecko.",
+  "description": "Warehousing UI Library for Tradegecko.",
   "keywords": [
     "ember-addon"
   ],

@@ -1,1 +1,1 @@
-export { default } from 'tradegecko-ui/components/alert-box';
+export { default } from '@tradegecko/warehousing/components/alert-box';

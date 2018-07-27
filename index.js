@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-  name: 'tradegecko-ui',
+  name: '@tradegecko/warehousing',
 };

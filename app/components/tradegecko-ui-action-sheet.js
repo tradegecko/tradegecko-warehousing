@@ -1,1 +1,1 @@
-export { default } from 'tradegecko-ui/components/action-sheet';
+export { default } from '@tradegecko/warehousing/components/action-sheet';
