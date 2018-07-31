@@ -1,5 +1,5 @@
 {
-  "name": "tradegecko-warehousing",
+  "name": "@tradegecko/warehousing",
   "version": "0.1.0",
   "description": "Warehousing UI Library for Tradegecko.",
   "keywords": [
