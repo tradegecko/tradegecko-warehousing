@@ -8,8 +8,7 @@ const Button = Component.extend({
   tagName: 'button',
   classNames: 'tradegecko-ui-button',
   classNameBindings: ['typeClass'],
-  attributeBindings: ['type', 'disabled', 'role', 'aria-label'],
-  role: 'button',
+  attributeBindings: ['type', 'disabled', 'aria-label'],
 
   typeClass: computed('buttonType', function() {
     return `tradegecko-ui-button--${this.get('buttonType')}`;
