@@ -1,0 +1,31 @@
+$details-block-vertical-margin: 15px;
+$row-border-bottom: 1px dotted #c4ced1;
+$row-label-color: #2d3033;
+$row-label-font-weight: 700;
+$row-label-font-size: 14px;
+$row-label-line-height: 30px;
+$row-value-font-size: 14px;
+$row-value-line-height: 30px;
+
+.details-block {
+  margin: $details-block-vertical-margin 0;
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: $row-border-bottom;
+  }
+  &__row:last-child {
+    border-bottom: 0;
+  }
+  &__row-label {
+    color: $row-label-color;
+    font-weight: $row-label-font-weight;
+    font-size: $row-label-font-size;
+    line-height: $row-label-line-height;
+  }
+  &__row-value {
+    font-size: $row-value-font-size;
+    line-height: $row-value-line-height;
+  }
+}
