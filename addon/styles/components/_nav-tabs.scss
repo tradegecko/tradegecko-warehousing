@@ -1,0 +1,31 @@
+$tab-padding-left: 15px;
+$tab-padding-right: 15px;
+$tab-background-color: #e2e6e8;
+$tab-line-height: 32px;
+$active-tab-line-height: 34px;
+$active-tab-border-color: #c4ced1;
+
+.tradegecko-ui-nav-tabs {
+  display: flex;
+
+  &__tab {
+    align-self: flex-end;
+    padding-left: $tab-padding-left;
+    padding-right: $tab-padding-right;
+    background-color: $tab-background-color;
+    color: inherit;
+    border: 1px solid transparent;
+    border-bottom: 0;
+    line-height: $tab-line-height;
+
+    &:not(.active) + .tradegecko-ui-nav-tabs__tab {
+      border-left-color: #fff;
+    }
+
+    &.active {
+      border-color: $active-tab-border-color;
+      background-color: #fff;
+      line-height: $active-tab-line-height;
+    }
+  }
+}
