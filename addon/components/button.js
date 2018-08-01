@@ -5,6 +5,7 @@ import { PropTypes } from 'ember-prop-types';
 
 const Button = Component.extend({
   layout,
+  tagName: 'button',
   classNames: 'tradegecko-ui-button',
   classNameBindings: ['typeClass'],
   attributeBindings: ['type', 'disabled', 'role', 'aria-label'],
