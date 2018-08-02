@@ -10,17 +10,20 @@ $active-tab-border-radius: 2px;
   display: flex;
   border-bottom: 1px solid $tabs-border-color;
 
+  &__tab, &__tab:focus {
+    border: 1px solid transparent;
+    border-bottom: 0;
+  }
+
   &__tab {
     align-self: flex-end;
     padding-left: $tab-padding-left;
     padding-right: $tab-padding-right;
     background-color: $tab-background-color;
     color: inherit;
-    border: 1px solid transparent;
-    border-bottom: 0;
     line-height: $tab-line-height;
 
-    &:not(.active) + .tradegecko-ui-nav-tabs__tab {
+    + .tradegecko-ui-nav-tabs__tab {
       border-left-color: #fff;
     }
 
@@ -32,6 +35,10 @@ $active-tab-border-radius: 2px;
       border-color: $tabs-border-color;
       background-color: #fff;
       line-height: $active-tab-line-height;
+
+      + .tradegecko-ui-nav-tabs__tab {
+        border-left-color: transparent;
+      }
     }
   }
 }
