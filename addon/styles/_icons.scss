@@ -1,0 +1,16 @@
+$custom-icons: (
+  variant-image-placeholder
+);
+
+@mixin custom-icon($name) {
+  background-image: url('/images/icons/icon-' + $name + '.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@each $name in $custom-icons {
+  .icon-#{$name} {
+    @include custom-icon($name);
+  }
+}
