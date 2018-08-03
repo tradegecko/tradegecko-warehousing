@@ -1,0 +1,26 @@
+<input
+  type="checkbox"
+  class="tradegecko-ui-checkbox__input"
+  id={{uniqueID}}
+  checked={{checked}}
+  disabled={{disabled}}
+  name={{aria-label}}
+  onchange={{action "onChange" value="target.checked"}}
+/>
+
+<label
+  for={{uniqueID}}
+  class="tradegecko-ui-checkbox__label {{if disabled 'tradegecko-ui-checkbox__label--disabled'}}"
+  aria-label={{aria-label}}
+>
+  <div class="tradegecko-ui-checkbox__check-icon"></div>
+  {{#if (or label hasBlock)}}
+    <div class="tradegecko-ui-checkbox__content-container">
+      {{#if hasBlock}}
+        {{yield}}
+      {{else}}
+        {{label}}
+      {{/if}}
+    </div>
+  {{/if}}
+</label>
