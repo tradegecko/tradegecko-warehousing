@@ -1,7 +1,7 @@
 import Component from '@ember/component';
 import { PropTypes } from 'ember-prop-types';
 import prefix from '../utils/computed/prefix';
-import layout from '../templates/components/button';
+import layout from '../templates/components/checkbox';
 
 const Checkbox = Component.extend({
   layout,
