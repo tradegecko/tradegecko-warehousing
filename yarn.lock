@@ -24,6 +24,10 @@
   version "0.7.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.7.0.tgz#9a06f4f137ee84d7df0460c1fdb1135ffa6c50fd"
 
+"@tradegecko/fonts@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@tradegecko/fonts/-/fonts-0.1.2.tgz#f3c52f523201842dc7c2d0faa3b0ae2e3d297e03"
+
 abbrev@1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/abbrev/-/abbrev-1.1.1.tgz#f8f2c887ad10bf67f634f005b6987fed3179aac8"
