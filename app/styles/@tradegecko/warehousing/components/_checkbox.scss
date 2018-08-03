@@ -1,0 +1,156 @@
+$c-checkbox-bg: $white;
+$c-checkbox-disabled-border: $gray-3;
+$c-checkbox-disabled-bg: $gray-1;
+$c-checkbox-selected-bg: $c-checkbox-bg;
+
+// THEMES
+// default apperance
+$checkbox-size: 18px;
+$check-size: 11px;
+$checkbox-border-radius: 2px;
+$c-check: $gray-6;
+$c-disabled-check: $gray-3;
+$c-checkbox-border: $gray-3;
+$c-checkbox-selected-border: $c-moko;
+
+// apperance='bulk-action' theme is to be used on table rows or within a list of checkboxes.
+$c-primary-border: $c-moko;
+
+// apperance='single-action' theme is to be used on table rows or within a list of checkboxes.
+$single-use-checkbox-size: 20px;
+$single-use-check-size: 12px;
+$c-single-use-check: $c-moko;
+$c-checkbox-border: $gray-3;
+$c-single-use-checkbox-selected-border: $c-moko;
+
+.tradegecko-ui-checkbox {
+  &__input {
+    opacity: 0;
+    position: absolute;
+    height: 0;
+    width: 0;
+    border: none;
+    margin: 0;
+    padding: 0;
+    &:focus + label .tradegecko-ui-checkbox__check-icon {
+      @include input-focus;
+    }
+  }
+
+  &__label {
+    display: flex;
+    line-height: 18px;
+    cursor: pointer;
+  }
+
+  &__content-container {
+    padding-left: 5px;
+  }
+
+  &__check-icon {
+    min-width: $checkbox-size;
+    width: $checkbox-size;
+    height: $checkbox-size;
+    border: 1px solid $c-checkbox-border;
+    background: $c-checkbox-bg;
+    border-radius: $checkbox-border-radius;
+    cursor: pointer;
+  }
+
+  &--checked &__check-icon {
+    border: 1px solid $c-checkbox-selected-border;
+  }
+
+  &__check-icon::after {
+    @include tg-icon($tg-var-tick);
+    font-size: $check-size;
+    color: $c-check;
+    margin-left: 3px;
+    visibility: hidden;
+  }
+
+  &--checked &__check-icon::after {
+    visibility: visible;
+  }
+
+  &--some &__check-icon::after {
+    @include tg-icon($tg-var-minus);
+    font-size: $check-size;
+    color: $c-check;
+    margin-left: 3px;
+  }
+
+  &--disabled {
+    cursor: not-allowed;
+  }
+
+  &--disabled & {
+    &__check-icon {
+      border-color: $c-checkbox-disabled-border;
+      background: $c-checkbox-disabled-bg;
+      cursor: not-allowed;
+    }
+
+    &__check-icon::after {
+      color: $c-disabled-check;
+    }
+
+    &__label {
+      cursor: not-allowed;
+    }
+  }
+}
+
+// .tg-check--bulk-action {
+//   .tg-check__check-icon {
+//     border: 1px solid $c-primary-border;
+//   }
+
+//   &.tg-check--checked.tg-check--disabled {
+//     .tg-check__check-icon {
+//       border-color: $c-checkbox-disabled-border;
+//     }
+
+//     &::after {
+//       color: $c-checkbox-disabled-border;
+//     }
+//   }
+
+//   &.tg-check--disabled .tg-check__check-icon {
+//     border-color: $c-checkbox-disabled-border;
+//   }
+// }
+
+// .tg-check--single-action {
+//   .tg-check__check-icon {
+//     min-width: $single-use-checkbox-size;
+//     width: $single-use-checkbox-size;
+//     height: $single-use-checkbox-size;
+//     flex-basis: $single-use-checkbox-size;
+//     flex-shrink: 0;
+//   }
+
+//   &.tg-check--checked .tg-check__check-icon::after {
+//     font-size: $single-use-check-size;
+//     color: $c-single-use-check;
+//   }
+
+//   &.tg-check--checked.tg-check--some .tg-check__check-icon::after {
+//     font-size: $single-use-check-size;
+//     color: $c-single-use-check;
+//   }
+
+//   &.tg-check--checked.tg-check--disabled {
+//     .tg-check__check-icon {
+//       border-color: $c-checkbox-disabled-border;
+
+//       &::after {
+//         color: $c-checkbox-disabled-border;
+//       }
+//     }
+//   }
+
+//   &.tg-check--checked .tg-check__check-icon {
+//     border: 1px solid $c-single-use-check;
+//   }
+// }

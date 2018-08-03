@@ -1,0 +1,16 @@
+@mixin input-focus($glow: true) {
+  @if $glow {
+    box-shadow: 0 0 7px rgba($c-moko, 0.4);
+  }
+  box-shadow: none;
+  border-color: rgba($c-moko, 0.8);
+}
+
+@function icon-content($icon-var) {
+  @return unquote("\"#{ $icon-var }\"");
+}
+
+@mixin tg-icon($icon-var) {
+  content: icon-content($icon-var);
+  font-family: $tg-icon-font-family;
+}
