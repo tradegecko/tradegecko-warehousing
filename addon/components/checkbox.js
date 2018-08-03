@@ -12,9 +12,9 @@ const Checkbox = Component.extend({
   ],
   uniqueID: prefix('elementId', 'tradegecko-ui-checkbox_'),
 
-  change(event) {
-    if (this.onChange && !this.get('disabled')) {
-      this.onChange(event);
+  actions: {
+    onChange(checked) {
+      this.onChange(checked);
     }
   },
 });

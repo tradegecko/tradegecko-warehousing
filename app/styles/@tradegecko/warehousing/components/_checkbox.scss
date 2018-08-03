@@ -7,7 +7,9 @@ $c-checkbox-selected-bg: $c-checkbox-bg;
 // default apperance
 $checkbox-size: 18px;
 $check-size: 11px;
+$check-icon-offset: 3px;
 $checkbox-border-radius: 2px;
+$checkbox-content-padding: 5px;
 $c-check: $gray-6;
 $c-disabled-check: $gray-3;
 $c-checkbox-border: $gray-3;
@@ -35,7 +37,7 @@ $c-primary-border: $c-moko;
   }
 
   &__content-container {
-    padding-left: 5px;
+    padding-left: $checkbox-content-padding;
   }
 
   &__check-icon {
@@ -56,7 +58,7 @@ $c-primary-border: $c-moko;
     @include tg-icon($tg-var-tick);
     font-size: $check-size;
     color: $c-check;
-    margin-left: 3px;
+    margin-left: $check-icon-offset;
     visibility: hidden;
   }
 
@@ -68,7 +70,7 @@ $c-primary-border: $c-moko;
     @include tg-icon($tg-var-minus);
     font-size: $check-size;
     color: $c-check;
-    margin-left: 3px;
+    margin-left: $check-icon-offset;
   }
 
   &--disabled {
