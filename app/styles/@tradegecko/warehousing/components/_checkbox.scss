@@ -12,16 +12,7 @@ $c-check: $gray-6;
 $c-disabled-check: $gray-3;
 $c-checkbox-border: $gray-3;
 $c-checkbox-selected-border: $c-moko;
-
-// apperance='bulk-action' theme is to be used on table rows or within a list of checkboxes.
 $c-primary-border: $c-moko;
-
-// apperance='single-action' theme is to be used on table rows or within a list of checkboxes.
-$single-use-checkbox-size: 20px;
-$single-use-check-size: 12px;
-$c-single-use-check: $c-moko;
-$c-checkbox-border: $gray-3;
-$c-single-use-checkbox-selected-border: $c-moko;
 
 .tradegecko-ui-checkbox {
   &__input {
@@ -100,57 +91,3 @@ $c-single-use-checkbox-selected-border: $c-moko;
     }
   }
 }
-
-// .tg-check--bulk-action {
-//   .tg-check__check-icon {
-//     border: 1px solid $c-primary-border;
-//   }
-
-//   &.tg-check--checked.tg-check--disabled {
-//     .tg-check__check-icon {
-//       border-color: $c-checkbox-disabled-border;
-//     }
-
-//     &::after {
-//       color: $c-checkbox-disabled-border;
-//     }
-//   }
-
-//   &.tg-check--disabled .tg-check__check-icon {
-//     border-color: $c-checkbox-disabled-border;
-//   }
-// }
-
-// .tg-check--single-action {
-//   .tg-check__check-icon {
-//     min-width: $single-use-checkbox-size;
-//     width: $single-use-checkbox-size;
-//     height: $single-use-checkbox-size;
-//     flex-basis: $single-use-checkbox-size;
-//     flex-shrink: 0;
-//   }
-
-//   &.tg-check--checked .tg-check__check-icon::after {
-//     font-size: $single-use-check-size;
-//     color: $c-single-use-check;
-//   }
-
-//   &.tg-check--checked.tg-check--some .tg-check__check-icon::after {
-//     font-size: $single-use-check-size;
-//     color: $c-single-use-check;
-//   }
-
-//   &.tg-check--checked.tg-check--disabled {
-//     .tg-check__check-icon {
-//       border-color: $c-checkbox-disabled-border;
-
-//       &::after {
-//         color: $c-checkbox-disabled-border;
-//       }
-//     }
-//   }
-
-//   &.tg-check--checked .tg-check__check-icon {
-//     border: 1px solid $c-single-use-check;
-//   }
-// }
