@@ -1,0 +1,42 @@
+$dropdown-padding: 15px;
+$dropdown-margin: 15px;
+$dropdown-option-padding: 10px;
+$dropdown-option-font-size: 14px;
+$dropdown-option-border-color: $gray-3;
+$dropdown-option-font-color: $gray-7;
+
+.tg-action-sheet-dropdown {
+  &__content {
+    padding: $dropdown-padding;
+  }
+
+  &__header {
+    margin-bottom: $dropdown-margin;
+    &-text {
+      font-weight: bold;
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__option {
+    text-align: left;
+    padding: $dropdown-option-padding 0;
+    font-size: $dropdown-option-font-size;
+
+    &:not(--selected) {
+      color: $dropdown-option-font-color;
+    }
+
+    + .tg-action-sheet-dropdown__option {
+      border-top: 1px solid $dropdown-option-border-color;
+    }
+  }
+
+  &__footer {
+    margin-top: $dropdown-margin;
+  }
+}

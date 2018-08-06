@@ -1,0 +1,40 @@
+{{#basic-dropdown as |dd|}}
+  {{#dd.trigger}}
+    {{yield (hash trigger=true)}}
+  {{/dd.trigger}}
+
+  {{#dd.content}}
+    {{#tradegecko-ui-action-sheet
+      hideModal=(action "close")
+    }}
+      <div class="tg-action-sheet-dropdown__content">
+        {{#if @header}}
+          <section class="tg-action-sheet-dropdown__header">
+            <h4 class="tg-action-sheet-dropdown__header-text">{{@header}}</h4>
+          </section>
+        {{/if}}
+
+        <section class="tg-action-sheet-dropdown__options">
+          {{#each @options as |option|}}
+            <button class="tg-action-sheet-dropdown__option">
+              <span>
+                {{#if @optionLabelPath}}
+                  {{get option @optionLabelPath}}
+                {{else}}
+                  {{@option}}
+                {{/if}}
+              </span>
+              <div class="tg-action-sheet-dropdown__selected-icon"></div>
+            </button>
+          {{/each}}
+        </section>
+
+        {{#if @footer}}
+          <section class="tg-action-sheet-dropdown__footer">
+            {{tradegecko-ui-button label=@primaryButtonLabel action=@primaryButtonAction}}
+          </section>
+        {{/if}}
+      </div>
+    {{/tradegecko-ui-action-sheet}}
+  {{/dd.content}}
+{{/basic-dropdown}}
