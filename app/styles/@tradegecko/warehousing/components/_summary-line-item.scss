@@ -7,6 +7,10 @@ $quantity-label-color: #6c7279;
 $quantity-color: #2d3033;
 $sku-color: #6c7279;
 $name-color: #2d3033;
+$placeholder-image-padding: 10px;
+$placeholder-image-border-radius: 3px;
+$placeholder-image-background-color: #fff;
+$placeholder-image-border-color: #e2e6e8;
 
 .summary-line-item {
   display: flex;
@@ -52,5 +56,14 @@ $name-color: #2d3033;
     font-size: 14px;
     line-height: 19px;
     font-weight: bold;
+  }
+
+  &__placeholder-image {
+    @include square-size($thumbnail-width - 2*$placeholder-image-padding - 2);
+    background-origin: content-box;
+    background-color: $placeholder-image-background-color;
+    padding: $placeholder-image-padding;
+    border-radius: $placeholder-image-border-radius;
+    border: 1px solid $placeholder-image-border-color;
   }
 }
