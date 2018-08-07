@@ -1,0 +1,45 @@
+$content-padding: 15px;
+$label-margin-top: 20px;
+$label-margin-bottom: 5px;
+$label-font-weight: 700;
+$input-border-radius: 3px;
+$input-height: 40px;
+$c-input-border: $gray-3;
+$c-input-focus-border: $c-moko;
+$primary-button-margin-top: 15px;
+$secondary-button-margin-top: 15px;
+$c-secondary-button-text: $gray-4;
+
+.tradegecko-ui-scanner-increment-modal {
+  padding: $content-padding;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+  &__label {
+    margin-top: $label-margin-top;
+    margin-bottom: $label-margin-bottom;
+    font-weight: $label-font-weight;
+  }
+  &__input {
+    box-sizing: border-box;
+    height: $input-height;
+    border: 1px solid $c-input-border;
+    border-radius: $input-border-radius;
+    text-align: right;
+  }
+  &__input:focus {
+    border: 1px solid $c-input-focus-border;
+    box-shadow: 0 0 3px 0 rgba($c-input-focus-border, 0.5);
+  }
+  &__primary-button {
+    margin-top: $primary-button-margin-top;
+  }
+  &__secondary-button {
+    margin-top: $secondary-button-margin-top;
+    color: $c-secondary-button-text;
+  }
+  .flex-space {
+    flex-grow: 1;
+  }
+}
