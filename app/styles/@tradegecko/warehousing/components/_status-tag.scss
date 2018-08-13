@@ -1,0 +1,26 @@
+$status-tag-font-size: 11px;
+$status-tag-font-color: $white;
+$status-tag-left-right-padding: 3px;
+$status-tag-top-bottom-padding: 5px;
+$status-tag-border-radius: 2px;
+$status-tag-line-height: 12px;
+
+.tradegecko-ui-status-tag {
+  font-size: $status-tag-font-size;
+  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  color: $status-tag-font-color;
+  padding: $status-tag-left-right-padding $status-tag-top-bottom-padding;
+  border-radius: $status-tag-border-radius;
+  line-height: $status-tag-line-height;
+
+  &--shippable {
+    background-color: $c-moko;
+  }
+
+  &--partially_shippable {
+    background-color: $c-oops-light;
+  }
+}
