@@ -21,6 +21,7 @@
     "ember-cli-babel": "^6.14.1",
     "ember-cli-htmlbars": "^2.0.3",
     "ember-cli-sass": "^7.1.7",
+    "ember-content-placeholders": "^1.0.0",
     "ember-wormhole": "^0.5.4"
   },
   "devDependencies": {
@@ -35,7 +36,6 @@
     "ember-cli-shims": "^1.2.0",
     "ember-cli-sri": "^2.1.0",
     "ember-cli-uglify": "^2.0.0",
-    "ember-content-placeholders": "^1.0.0",
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.1.0",
