@@ -1,6 +1,8 @@
 @import 'variables/tg-icons';
 @import 'mixins';
 @import 'icons';
+@import 'vendor/variables/ember-content-placeholders';
+@import 'node_modules/ember-content-placeholders/app/styles/ember-content-placeholders';
 
 @import 'components/button';
 @import 'components/alert-box';
@@ -9,7 +11,10 @@
 @import 'components/action-sheet';
 @import 'components/nav-tabs';
 @import 'components/status-tag';
+@import 'components/list-empty-state';
+@import 'components/loading-state-placeholder';
 @import 'components/details-block';
 @import 'components/summary-line-item';
 @import 'components/checkbox';
 @import 'components/scanner-increment-modal';
+@import 'components/quantity-input-modal';
