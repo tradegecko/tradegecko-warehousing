@@ -2,7 +2,6 @@ import { helper } from '@ember/component/helper';
 import { isNone } from '@ember/utils';
 
 export function humanize([ value ]) {
-  debugger
   if (isNone(value)) {
     return '';
   }
