@@ -59,7 +59,7 @@ $placeholder-image-border-color: #e2e6e8;
   }
 
   &__placeholder-image {
-    @include square-size($thumbnail-width - 2*$placeholder-image-padding - 2);
+    @include square-size($thumbnail-width);
     background-origin: content-box;
     background-color: $placeholder-image-background-color;
     padding: $placeholder-image-padding;
