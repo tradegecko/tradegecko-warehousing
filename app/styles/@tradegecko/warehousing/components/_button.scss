@@ -4,25 +4,39 @@ $primary-button-font-size: 13px;
 $primary-button-line-height: 15px;
 $secondary-button-font-size: 12px;
 $secondary-button-line-height: 14px;
+$naked-button-font-size: 12px;
+$naked-button-line-height: 14px;
 
 $button-types: (
   (
     name: primary,
     font-size: $primary-button-font-size,
     line-height: $primary-button-line-height,
-    color: #fff,
-    background-color: #70cf32,
-    disabled-color: #fff,
-    disabled-background-color: #e2e6e8,
+    color: $white,
+    background-color: $c-moko,
+    border-color: $c-moko,
+    disabled-color: $white,
+    disabled-background-color: $gray-2,
   ),
   (
     name: secondary,
     font-size: $secondary-button-font-size,
     line-height: $secondary-button-line-height,
-    color: #70cf32,
-    background-color: #fff,
-    disabled-color: #c4ced1,
-    disabled-background-color: #fff,
+    color: $c-moko,
+    background-color: $white,
+    border-color: $c-moko,
+    disabled-color: $gray-3,
+    disabled-background-color: $white,
+  ),
+  (
+    name: naked,
+    font-size: $naked-button-font-size,
+    line-height: $naked-button-line-height,
+    color: $gray-4,
+    background-color: $white,
+    border-color: $white,
+    disabled-color: $gray-3,
+    disabled-background-color: $white,
   ),
 );
 
@@ -41,7 +55,7 @@ $button-types: (
   &[disabled] {
     cursor: default;
     pointer-events: none;
-    border-color: #e2e6e8;
+    border-color: $gray-2;
   }
 
   @each $type in $button-types {
@@ -51,14 +65,14 @@ $button-types: (
       padding: (0.5 * ($button-height - map-get($type, line-height))) 15px;
       color: map-get($type, color);
       background-color: map-get($type, background-color);
-      border-color: #70cf32;
+      border-color: map-get($type, border-color);
 
       &[disabled] {
         color: map-get($type, disabled-color);
         background-color: map-get($type, disabled-background-color);
       }
       &:focus {
-        border: 1px solid #70cf32;
+        border-color: map-get($type, border-color);
       }
     }
   }
