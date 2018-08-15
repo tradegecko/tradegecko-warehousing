@@ -17,6 +17,7 @@ $button-types: (
     border-color: $c-moko,
     disabled-color: $white,
     disabled-background-color: $gray-2,
+    disabled-border-color: $gray-2,
   ),
   (
     name: secondary,
@@ -27,6 +28,7 @@ $button-types: (
     border-color: $c-moko,
     disabled-color: $gray-3,
     disabled-background-color: $white,
+    disabled-border-color: $gray-2,
   ),
   (
     name: naked,
@@ -37,6 +39,7 @@ $button-types: (
     border-color: $white,
     disabled-color: $gray-3,
     disabled-background-color: $white,
+    disabled-border-color: $white,
   ),
 );
 
@@ -55,7 +58,6 @@ $button-types: (
   &[disabled] {
     cursor: default;
     pointer-events: none;
-    border-color: $gray-2;
   }
 
   @each $type in $button-types {
@@ -70,6 +72,7 @@ $button-types: (
       &[disabled] {
         color: map-get($type, disabled-color);
         background-color: map-get($type, disabled-background-color);
+        border-color: map-get($type, disabled-border-color);
       }
       &:focus {
         border-color: map-get($type, border-color);
