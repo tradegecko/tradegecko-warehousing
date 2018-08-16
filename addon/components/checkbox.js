@@ -22,12 +22,13 @@ const Checkbox = Component.extend({
 Checkbox.propTypes = {
   checked: PropTypes.bool,
   disabled: PropTypes.bool,
-  onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func,
 };
 
 Checkbox.defaultProps = {
   checked: false,
   disabled: false,
+  onChange: () => {},
 };
 
 export default Checkbox;
