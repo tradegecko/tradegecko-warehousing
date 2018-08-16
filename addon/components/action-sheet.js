@@ -9,19 +9,23 @@ const ActionSheet = Component.extend({
 
   didInsertElement() {
     this._super(...arguments);
-    this.keyDownHandler = _keyDownHandler.bind(this);
-    this.clickHandler = _clickHandler.bind(this);
-    window.addEventListener('keydown', this.keyDownHandler);
-    window.addEventListener('click', this.clickHandler);
-    window.addEventListener('touchstart', this.clickHandler);
+    if (this.get('dismissable')) {
+      this.keyDownHandler = _keyDownHandler.bind(this);
+      this.clickHandler = _clickHandler.bind(this);
+      window.addEventListener('keydown', this.keyDownHandler);
+      window.addEventListener('click', this.clickHandler);
+      window.addEventListener('touchstart', this.clickHandler);
+    }
     document.querySelector('body').classList.add('tradegecko-ui-action-sheet--open');
   },
 
   willDestroyElement() {
     this._super(...arguments);
-    window.removeEventListener('keydown', this.keyDownHandler);
-    window.removeEventListener('click', this.clickHandler);
-    window.removeEventListener('touchstart', this.clickHandler);
+    if (this.get('dismissable')) {
+      window.removeEventListener('keydown', this.keyDownHandler);
+      window.removeEventListener('click', this.clickHandler);
+      window.removeEventListener('touchstart', this.clickHandler);
+    }
     document.querySelector('body').classList.remove('tradegecko-ui-action-sheet--open');
   },
 });
@@ -39,7 +43,12 @@ function _clickHandler(event) {
 }
 
 ActionSheet.propTypes = {
-  hideModal: PropTypes.func.isRequired
+  hideModal: PropTypes.func.isRequired,
+  dismissable: PropTypes.bool,
+};
+
+ActionSheet.defaultProps = {
+  dismissable: true,
 };
 
 export default ActionSheet;
