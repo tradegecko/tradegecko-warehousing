@@ -6,7 +6,7 @@ module.exports = function(defaults) {
   var app = new EmberAddon(defaults, {
     sassOptions: {
       includePaths: ['app/styles'],
-    }
+    },
   });
   /*
     This build file specifies the options for the dummy test app of this

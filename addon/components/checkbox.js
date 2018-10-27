@@ -15,7 +15,7 @@ const Checkbox = Component.extend({
   actions: {
     onChange(checked) {
       this.onChange(checked);
-    }
+    },
   },
 });
 
