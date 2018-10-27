@@ -15,6 +15,6 @@ SummaryLineItem.propTypes = {
 
 SummaryLineItem.defaultPropes = {
   imageAltText: '',
-}
+};
 
 export default SummaryLineItem;
