@@ -12,6 +12,20 @@ Router.map(function() {
   docsRoute(this, function() {
     /* Your docs routes go here */
     this.route('components', function() {
+      this.route('buttons');
+      this.route('alertBox');
+      this.route('checkBox');
+      this.route('detailsBlock');
+      this.route('emptyList');
+      this.route('freeformLineItem');
+      this.route('loadingStatePlaceholder');
+      this.route('navTabs');
+      this.route('progressBar');
+      this.route('quantityInputModal');
+      this.route('scannerIncrementModal');
+      this.route('siteHeader');
+      this.route('statusTag');
+      this.route('summeryLineItem');
     });
   });
   this.route('not-found', { path: '/*path' });
