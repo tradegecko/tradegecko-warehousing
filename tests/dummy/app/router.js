@@ -1,7 +1,7 @@
-import Ember from 'ember';
+import AddonDocsRouter, { docsRoute } from 'ember-cli-addon-docs/router';
 import config from './config/environment';
 
-const Router = Ember.Router.extend({
+const Router = AddonDocsRouter.extend({
   location: config.locationType,
   rootURL: config.rootURL,
 });
@@ -9,6 +9,12 @@ const Router = Ember.Router.extend({
 Router.map(function() {
   this.route("buttons");
   this.route("colors");
+  docsRoute(this, function() {
+    /* Your docs routes go here */
+    this.route('components', function() {
+    });
+  });
+  this.route('not-found', { path: '/*path' });
 });
 
 export default Router;
