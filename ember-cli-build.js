@@ -7,6 +7,16 @@ module.exports = function(defaults) {
     sassOptions: {
       includePaths: ['app/styles'],
     },
+    minifyJS: {
+      options: {
+        exclude: ["**/vendor.js"],
+      },
+    },
+    'ember-cli-uglify': {
+      uglify: {
+        compress: false, // added this to workaround the issue
+      },
+    },
   });
   /*
     This build file specifies the options for the dummy test app of this

@@ -28,6 +28,9 @@
     "ember-content-placeholders": "^1.0.0",
     "ember-wormhole": "^0.5.4"
   },
+  "resolutions": {
+    "uglify-es": "^3.3.9"
+  },
   "devDependencies": {
     "broccoli-asset-rev": "^2.7.0",
     "ember-ajax": "^3.0.0",
