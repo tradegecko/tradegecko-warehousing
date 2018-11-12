@@ -4,5 +4,17 @@
     "name": "gh-pages",
     "sha": "efd0f84d95a952733bb87d2fdf36a3127d60db4d",
     "tag": null
+  },
+  "v0.3.0": {
+    "path": "versions/v0.3.0",
+    "name": "v0.3.0",
+    "sha": "9f226ea30fc84d0b02fa1436dc06d0135de64921",
+    "tag": "v0.3.0"
+  },
+  "-latest": {
+    "path": "",
+    "name": "Latest",
+    "sha": "9f226ea30fc84d0b02fa1436dc06d0135de64921",
+    "tag": "v0.3.0"
   }
 }

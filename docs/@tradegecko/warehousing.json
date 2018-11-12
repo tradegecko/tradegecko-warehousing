@@ -1,0 +1,1 @@
+{"jsonapi":{"version":"1.0"},"data":{"type":"project","id":"@tradegecko/warehousing","attributes":{"name":"@tradegecko/warehousing","version":"0.2.0","navigationIndex":{}},"relationships":{"modules":{"data":[]}}}}
