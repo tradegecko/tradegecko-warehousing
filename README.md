@@ -23,4 +23,11 @@ This README outlines the details of collaborating on this Ember addon.
 
 * `ember build`
 
+## Deployment
+
+The deployment is done on Github Pages. We use the branch `gh-pages` for deploys. To deploy new changes, create a new tag/version and use the command `ember deploy production` to deploy.
+
+More documentation here >>
+[Ember addon docs deployment](https://ember-learn.github.io/ember-cli-addon-docs/docs/deploying)
+
 For more information on using ember-cli, visit [http://ember-cli.com/](http://ember-cli.com/).
