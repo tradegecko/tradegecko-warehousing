@@ -1,8 +1,8 @@
 {
   "name": "@tradegecko/warehousing",
-  "version": "0.2.0",
+  "version": "0.4.0",
   "description": "Warehousing UI Library for Tradegecko.",
-    "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/tradegecko/tradegecko-warehousing.git"
   },
