@@ -47,7 +47,7 @@ $button-types: (
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: Raleway, "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: $sans-font-family;
   font-weight: bold;
   text-align: center;
   border: 1px solid;
