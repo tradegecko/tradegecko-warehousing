@@ -1,12 +1,12 @@
 .sidebar {
-  background-color: $c-vhs-dark;
+  background-color: $ui-blue-darker;
   width: $sidebar-width;
   position: fixed;
   height: 100%;
 
   &__logo {
     padding: $size-xl;
-    background-color: $c-vhs;
+    background-color: $ui-blue-dark;
     color: $white;
     font-weight: 600;
     font-family: "Raleway";
@@ -41,7 +41,7 @@
     }
 
     &:hover {
-      color: $c-sky;
+      color: $ui-blue-dark;
       transition: color .5s ease;
     }
 

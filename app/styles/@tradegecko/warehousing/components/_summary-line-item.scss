@@ -2,15 +2,15 @@ $line-item-top-padding: 10px;
 $thumbnail-width: 55px;
 $info-vertical-padding: 5px;
 $info-horizontal-padding: 10px;
-$line-item-bottom-border-color: #e2e6e8;
-$quantity-label-color: #6c7279;
-$quantity-color: #2d3033;
-$sku-color: #6c7279;
-$name-color: #2d3033;
+$line-item-bottom-border-color: $gray-2;
+$quantity-label-color: $gray-7;
+$quantity-color: $gray-9;
+$sku-color: $gray-7;
+$name-color: $gray-9;
 $placeholder-image-padding: 10px;
 $placeholder-image-border-radius: 3px;
-$placeholder-image-background-color: #fff;
-$placeholder-image-border-color: #e2e6e8;
+$placeholder-image-background-color: $white;
+$placeholder-image-border-color: $gray-2;
 
 .summary-line-item {
   display: flex;

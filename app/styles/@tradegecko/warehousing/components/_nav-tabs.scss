@@ -1,10 +1,10 @@
 $tab-font-size: 12px;
 $tab-font-color: $gray-5;
 $active-tab-font-color: $gray-6;
-$tabs-border-color: #c4ced1;
+$tabs-border-color: $gray-3;
 $tab-padding-left: 15px;
 $tab-padding-right: 15px;
-$tab-background-color: #e2e6e8;
+$tab-background-color: $gray-2;
 $tab-line-height: 32px;
 $active-tab-line-height: 35px;
 $active-tab-border-radius: 2px;
@@ -33,7 +33,7 @@ $active-tab-border-radius: 2px;
     }
 
     + .tradegecko-ui-nav-tabs__tab {
-      border-left-color: #fff;
+      border-left-color: $white;
     }
 
     &.active {
@@ -42,7 +42,7 @@ $active-tab-border-radius: 2px;
       border-top-left-radius: $active-tab-border-radius;
       border-top-right-radius: $active-tab-border-radius;
       border-color: $tabs-border-color;
-      background-color: #fff;
+      background-color: $white;
       color: $active-tab-font-color;
       line-height: $active-tab-line-height;
 
