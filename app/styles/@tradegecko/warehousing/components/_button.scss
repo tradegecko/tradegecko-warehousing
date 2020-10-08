@@ -1,82 +1,90 @@
-$button-height: 38px;
-$button-border-radius: 3px;
-$primary-button-font-size: 13px;
-$primary-button-line-height: 15px;
-$secondary-button-font-size: 12px;
-$secondary-button-line-height: 14px;
-$naked-button-font-size: 12px;
-$naked-button-line-height: 14px;
-
-$button-types: (
-  (
-    name: primary,
-    font-size: $primary-button-font-size,
-    line-height: $primary-button-line-height,
-    color: $white,
-    background-color: $c-moko,
-    border-color: $c-moko,
-    disabled-color: $white,
-    disabled-background-color: $gray-2,
-    disabled-border-color: $gray-2,
-  ),
-  (
-    name: secondary,
-    font-size: $secondary-button-font-size,
-    line-height: $secondary-button-line-height,
-    color: $c-moko,
-    background-color: $white,
-    border-color: $c-moko,
-    disabled-color: $gray-3,
-    disabled-background-color: $white,
-    disabled-border-color: $gray-2,
-  ),
-  (
-    name: naked,
-    font-size: $naked-button-font-size,
-    line-height: $naked-button-line-height,
-    color: $gray-4,
-    background-color: $white,
-    border-color: $white,
-    disabled-color: $gray-3,
-    disabled-background-color: $white,
-    disabled-border-color: $white,
-  ),
-);
+$button-border-radius: 18px;
+$button-font-size: 14px;
+$button-line-height: 1.1;
 
 .tradegecko-ui-button {
   display: flex;
   align-items: center;
   justify-content: center;
   font-family: $sans-font-family;
-  font-weight: bold;
+  font-weight: 600;
   text-align: center;
-  border: 1px solid;
   border-radius: $button-border-radius;
-  text-transform: uppercase;
   cursor: pointer;
 
   &[disabled] {
-    cursor: default;
-    pointer-events: none;
+    opacity: 0.4;
   }
 
-  @each $type in $button-types {
-    &--#{map-get($type, name)} {
-      font-size: map-get($type, font-size);
-      line-height: map-get($type, line-height);
-      padding: (0.5 * ($button-height - map-get($type, line-height))) 15px;
-      color: map-get($type, color);
-      background-color: map-get($type, background-color);
-      border-color: map-get($type, border-color);
+  &--primary {
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    color: $white;
+    background-color: $ui-green-dark;
+    border: 0;
+    padding: 10px 20px;
 
-      &[disabled] {
-        color: map-get($type, disabled-color);
-        background-color: map-get($type, disabled-background-color);
-        border-color: map-get($type, disabled-border-color);
-      }
-      &:focus {
-        border-color: map-get($type, border-color);
-      }
+    &:hover,
+    &:focus {
+      background-color: rgba($ui-green-darker, 0.9);
+    }
+
+    &:active:focus {
+      background-color: $ui-green-darker;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      background-color: $ui-green-dark;
+      opacity: 0.4;
+    }
+  }
+
+  &--secondary {
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    color: $gray-9;
+    background-color: $white;
+    border: 2px solid $gray-6;
+    padding: 8px 20px;
+
+    &:hover,
+    &:focus {
+      background-color: rgba($gray-6, 0.2);
+    }
+
+    &:active:focus {
+      background-color: rgba($gray-6, 0.4);
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      background-color: $white;
+      opacity: 0.4;
+    }
+  }
+
+  &--naked {
+    font-size: $button-font-size;
+    line-height: $button-line-height;
+    color: $ui-blue-dark;
+    background-color: transparent;
+    border: 0;
+    padding: 10px 20px;
+    
+    &:hover,
+    &:focus {
+      background-color: rgba($gray-6, 0.2);
+    }
+
+    &:active:focus {
+      background-color: rgba($gray-6, 0.4);
+    }
+
+    &:disabled,
+    &:disabled:hover {
+      background-color: transparent;
+      opacity: 0.4;
     }
   }
 }

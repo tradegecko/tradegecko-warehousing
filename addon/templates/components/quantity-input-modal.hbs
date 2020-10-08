@@ -21,7 +21,10 @@
     label=primaryButtonLabel
     onClick=(action "handleSave")
   }}
-  <button onclick={{action hideModal}} class="tradegecko-ui-quantity-input-modal__secondary-button">
-    {{secondaryButtonLabel}}
-  </button>
+  {{tradegecko-ui-button
+    buttonType="naked"
+    class="tradegecko-ui-quantity-input-modal__secondary-button"
+    label=secondaryButtonLabel
+    onClick=(action hideModal)
+  }}
 </div>

@@ -8,7 +8,6 @@ $c-input-border: $gray-3;
 $c-input-focus-border: $c-moko;
 $primary-button-margin-top: 15px;
 $secondary-button-margin-top: 15px;
-$c-secondary-button-text: $gray-4;
 
 .tradegecko-ui-scanner-increment-modal {
   padding: $content-padding;
@@ -37,7 +36,6 @@ $c-secondary-button-text: $gray-4;
   }
   &__secondary-button {
     margin-top: $secondary-button-margin-top;
-    color: $c-secondary-button-text;
   }
   .flex-space {
     flex-grow: 1;
