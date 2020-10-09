@@ -7,7 +7,7 @@ $status-tag-line-height: 12px;
 
 .tradegecko-ui-status-tag {
   font-size: $status-tag-font-size;
-  font-family: "Raleway", "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   font-weight: 700;
   letter-spacing: 0.24px;
   text-transform: uppercase;
@@ -21,6 +21,6 @@ $status-tag-line-height: 12px;
   }
 
   &--partially_shippable {
-    background-color: $c-oops-light;
+    background-color: $ui-yellow;
   }
 }
